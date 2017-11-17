@@ -66,6 +66,40 @@
   font-size: 1em;
 }
 
+/*@user Anu*/
+/*[title~="#anu"],[title~="@anu"] {
+    background: #f442df !important;
+    color: white !important;
+}*/
+
+/*@user Noemi*/
+/*[title~="#noemi"],[title~="@noemi"] {
+    background: #a641f4 !important;
+    color: white !important;
+}*/
+
+/*@user Alberto/*
+/*[title~="#alberto"],[title~="@alberto"] {
+    background: #41acf4 !important;
+    color: white !important;
+}*/
+
+/*@user Matthias/*
+/*[title~="#matthias"],[title~="@matthias"] {
+    background: #6e42f4 !important;
+    color: white !important;
+}*/
+/*@user Daniel/*
+/*[title~="#daniel"],[title~="@daniel"] {
+    background: #41f4dc !important;
+    color: white !important;
+}*/
+/*@user Nadia
+/*[title~="#nadia"],[title~="@nadia"] {
+    background: #7f3a87 !important;
+    color: white !important;
+}*/
+
 /* Bullet */
 .Node-bullet:before
 {
