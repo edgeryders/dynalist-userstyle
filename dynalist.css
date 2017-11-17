@@ -24,7 +24,6 @@
 {
   background: #f6ff00 !important;
   color: black !important;
-  text-decoration: line-through !important;
 }
 
 .Node.is-checked .node-link, .Node.is-checked .node-tag, .Node.is-checked .node-time, .Node.is-checked .Node-content, .Node.is-checked .Node-renderedContent, .Node.is-checked
