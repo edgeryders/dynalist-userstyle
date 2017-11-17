@@ -1,0 +1,103 @@
+/*Important*/
+[title~="#important"]
+{
+  background: red !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+/* Permanent*/
+[title~="#permanent"]
+{
+  background: green !important;
+  color: white !important;
+  text-decoration: bold;
+}
+
+/* Blocked*/
+[title~="#blocked"]
+{
+  background: black !important;
+  color: white !important;
+}
+/* Discarded*/
+[title~="#discarded"]
+{
+  background: #f6ff00 !important;
+  color: black !important;
+  text-decoration: line-through !important;
+}
+
+.Node.is-checked .node-link, .Node.is-checked .node-tag, .Node.is-checked .node-time, .Node.is-checked .Node-content, .Node.is-checked .Node-renderedContent, .Node.is-checked
+{
+  color: #a9a9a9;
+  text-decoration: none !important;
+  font-style: oblique !important;
+  font-size: 0.9em !important;
+}
+
+.Node.is-checked .Node-content:before, .Node.is-checked .Node-renderedContent:before
+{
+  content: '#completed ';
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: #8d929b;
+  color: white;
+}
+
+[title~="@anu"], [title~="@noemi"], [title~="@alberto"], [title~="@matthias"], [title~="@daniel"], [title~="@nadia"], [title~="@anu."], [title~="@noemi."], [title~="@alberto."], [title~="@matthias."], [title~="@daniel."], [title~="@nadia."]
+{
+  background-color: #f4f4f4 !important;
+  color: #666663 !important;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+[title~="#anu"], [title~="#noemi"], [title~="#alberto"], [title~="#matthias"], [title~="#daniel"], [title~="#nadia"], [title~="#anu."], [title~="#noemi."], [title~="#alberto."], [title~="#matthias."], [title~="#daniel."], [title~="#nadia."]
+{
+  background-color: #e5e5e0!important;
+  color: #51514f !important;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+[title~="#by-anu"], [title~="#by-noemi"], [title~="#by-alberto"], [title~="#by-matthias"], [title~="#by-daniel"], [title~="#by-nadia"],[title~="#by-anu."], [title~="#by-noemi."], [title~="#by-alberto."], [title~="#by-matthias."], [title~="#by-daniel."], [title~="#by-nadia."]
+{
+  background-color: #d8d9e0 !important;
+  color: #666979 !important;
+  font-size: 1em;
+}
+
+/* Bullet */
+.Node-bullet:before
+{
+  color: #4CB9FF;
+}
+
+.node-link
+{
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  padding: 0 5px 0 5px;
+  color: #4CB9FF;
+  border-radius: 4px;
+  font-weight: normal;
+  border: none;
+}
+
+.node-tag:hover
+{
+  background-color: #363636!important;
+  color: white!important;
+}
+
+.node-inline-code
+{
+  color: black;
+  background-color: #ffefef;
+  font-family: monospace;
+}
