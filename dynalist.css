@@ -5,6 +5,7 @@
   background: red !important;
   color: white !important;
   font-weight: bold !important;
+  text-decoration: none !important;
 }
 
 /* #permanent tag */
@@ -12,18 +13,21 @@
   background: green !important;
   color: white !important;
   text-decoration: bold;
+  text-decoration: none !important;
 }
 
 /* #blocked tag */
 .node-tag[title~="#blocked"] {
   background: black !important;
   color: white !important;
+  text-decoration: none !important;
 }
 
 /* #discarded tag*/
 .node-tag[title~="#discarded"] {
   background: #f6ff00 !important;
   color: black !important;
+  text-decoration: none !important;
 }
 
 /* checked items appearance */
@@ -76,6 +80,7 @@
   background-color: #f4f4f4 !important;
   color: #646464 !important;
   font-weight: bold;
+  text-decoration: none !important;
 }
 .Node-contentContainer .node-tag[title*="Filter @"] {
   /* As in Discourse, but only applied to normal items. Font would become too small in notes. */
@@ -90,17 +95,11 @@
 /* hyperlinks */
 .node-link {
   /* Formatting done just as in Discourse. */
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  position: relative;
-  z-index: 2;
-  pointer-events: auto;
-  padding: 0 5px 0 5px;
-  color: #4CB9FF;
-  border-radius: 4px;
-  font-weight: normal;
-  border: none;
+  word-wrap: break-word;
+    color: #08c;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
 }
 
 /* hyperlinks on the empty page before opening any document */
