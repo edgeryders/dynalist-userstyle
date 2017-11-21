@@ -1,30 +1,29 @@
 @-moz-document domain("dynalist.io") {
-  
+
 /* #important tag */
-[title~="#important"] {
+.node-tag[title~="#important"] {
   background: red !important;
   color: white !important;
   font-weight: bold !important;
 }
 
 /* #permanent tag */
-[title~="#permanent"] {
+.node-tag[title~="#permanent"] {
   background: green !important;
   color: white !important;
   text-decoration: bold;
 }
 
 /* #blocked tag */
-[title~="#blocked"] {
+.node-tag[title~="#blocked"] {
   background: black !important;
   color: white !important;
 }
 
 /* #discarded tag*/
-[title~="#discarded"] {
+.node-tag[title~="#discarded"] {
   background: #f6ff00 !important;
   color: black !important;
-  /*text-decoration: line-through !important;*/
 }
 
 /* checked items appearance */
@@ -37,78 +36,61 @@
   color: #a9a9a9;
   text-decoration: none !important;
   font-style: oblique !important;
-  font-size: 0.9em !important;
 }
 
 /* checked items #completed tag (auto-added) */
 .Node.is-checked .Node-content:before, 
 .Node.is-checked .Node-renderedContent:before {
-  content: '#completed ';
-  font-weight: bold;
-  font-size: 1.1em;
-  background-color: #8d929b;
+  content: '#completed';
+  background: #8d929b;
   color: white;
+  font-weight: bold;
+  font-style: normal !important;
 }
 
 /* #username tags for task assignments */
-[title~="#alberto"],
-[title~="#anique.yael"],
-[title~="#anu"],
-[title~="#daniel"], 
-[title~="#hazem"], 
-[title~="#johncoate"], 
-[title~="#matthias"],
-[title~="#nadia"],
-[title~="#noemi"],
-[title~="#zmorda"] {
-  background-color: #e5e5e0 !important;
+.node-tag[title~="#alberto"],
+.node-tag[title~="#anique.yael"],
+.node-tag[title~="#anu"],
+.node-tag[title~="#daniel"], 
+.node-tag[title~="#hazem"], 
+.node-tag[title~="#johncoate"], 
+.node-tag[title~="#matthias"],
+.node-tag[title~="#nadia"],
+.node-tag[title~="#noemi"],
+.node-tag[title~="#zmorda"] {
+  background-color: #e5e5e0!important;
   color: #51514f !important;
   font-weight: bold;
-  font-size: 0.9em;
 }
 
 /* #by-username tags for task authorship */
-[title~="#by-alberto"],
-[title~="#by-anique.yael"],
-[title~="#by-anu"],
-[title~="#by-daniel"], 
-[title~="#by-hazem"], 
-[title~="#by-johncoate"], 
-[title~="#by-matthias"],
-[title~="#by-nadia"],
-[title~="#by-noemi"],
-[title~="#by-zmorda"] {
-  background-color: #d8d9e0 !important;
-  color: #666979 !important;
-  font-size: 1em;
+.node-tag[title*="#by-"] {
+  background-color: #f4f4f4 !important;
+  color: #646464 !important;
 }
 
 /* @username tags for mentions */
-[title~="@alberto"],
-[title~="@anique.yael"],
-[title~="@anu"],
-[title~="@daniel"], 
-[title~="@hazem"], 
-[title~="@johncoate"], 
-[title~="@matthias"],
-[title~="@nadia"],
-[title~="@noemi"],
-[title~="@zmorda"] {
+.node-tag[title*="Filter @"] {
+  /* Formatting done just as in Discourse. */
   background-color: #f4f4f4 !important;
-  color: #666663 !important;
+  color: #646464 !important;
   font-weight: bold;
-  font-size: 0.8em;
+}
+.Node-contentContainer .node-tag[title*="Filter @"] {
+  /* As in Discourse, but only applied to normal items. Font would become too small in notes. */
+  font-size: 0.93em;
 }
 
-/* task bulletpoint (formatting it like a link) */
+/* item bulletpoints */
 .Node-bullet:before {
   color: #4CB9FF;
 }
 
-/* hyperlinks (formatting them as in Discourse) */
+/* hyperlinks */
 .node-link {
+  /* Formatting done just as in Discourse. */
   display: inline-block;
-  font-size: 1em;
   cursor: pointer;
   text-decoration: none;
   position: relative;
@@ -132,24 +114,42 @@
   color: white !important;
 }
 
-/* code (formatting it as in Discourse) */
+/* code */
 .node-inline-code {
+  /* Formatting done just as in Discourse. */
   color: black;
   background-color: #ffefef;
   font-family: monospace;
 }
 
-/*********************************************************************/
-/* Section for your own, local configuration (overwrites the above). */
-
-/* highlighting own tasks */
-[title~="#your-username-here"] {
-  background-color: #cc9999 !important;
-}
+/******************************************/
+/* EDIT HERE TO HIGHLIGHT YOUR OWN STUFF */
   
-/* highlighting own mentions */
-[title~="@your-username-here"] {
-  background-color: #cc9999 !important;
+/* Adapt the selectors below with your name as used on Dynalist. 
+   You'll have to do this after every update of this Stylish library stylesheet. 
+   Alternatively copy&paste this to a new stylesheet applied on dynalist.io. */
+
+/* tasks I am assigned to */
+.node-tag[title~="#username"] {
+  background: #fe7a15 !important; /* heatmap-high color from Discourse */
+  color: black !important;
+}
+
+/* tasks I created */
+.node-tag[title~="#by-username"] {
+  background: #dcc8b2 !important; /* similar to heatmap-low color #9b764f from Discourse */
+}
+
+/* own mentions */
+.node-tag[title~="@username"] {
+  background: #dcc8b2 !important; /* similar to heatmap-low color #9b764f from Discourse */
+}
+/******************************************/
+
+/* #tags and @tags mouse-over highlighting */
+.node-tag:hover {
+  background-color: #363636 !important;
+  color: white !important;
 }
 
 } /* end @-moz-document */
