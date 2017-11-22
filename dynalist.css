@@ -1,4 +1,33 @@
-@-moz-document domain("dynalist.io") {
+@-moz-document url-prefix("https://dynalist.io/")
+
+/* checked items appearance */
+.Node.is-checked .node-link, 
+.Node.is-checked .node-tag, 
+.Node.is-checked .node-time, 
+.Node.is-checked .Node-content, 
+.Node.is-checked .Node-renderedContent, 
+.Node.is-checked {
+  color: #a9a9a9;
+  text-decoration: none !important;
+  font-style: oblique !important;
+}
+
+/* checked items #completed tag (auto-added) */
+.Node.is-checked .Node-content:before, 
+.Node.is-checked .Node-renderedContent:before {
+  content: '#completed';
+  background: #8d929b;
+  color: white;
+  font-weight: bold;
+  font-style: normal !important;
+}
+
+/* #username tags for task assignments */
+.node-tag[title*="Filter #"] {
+  background-color: #e5e5e0!important;
+  color: #51514f !important;
+  font-weight: bold;
+}
 
 /* #important tag */
 .node-tag[title~="#important"] {
@@ -28,44 +57,6 @@
   background: #f6ff00 !important;
   color: black !important;
   text-decoration: none !important;
-}
-
-/* checked items appearance */
-.Node.is-checked .node-link, 
-.Node.is-checked .node-tag, 
-.Node.is-checked .node-time, 
-.Node.is-checked .Node-content, 
-.Node.is-checked .Node-renderedContent, 
-.Node.is-checked {
-  color: #a9a9a9;
-  text-decoration: none !important;
-  font-style: oblique !important;
-}
-
-/* checked items #completed tag (auto-added) */
-.Node.is-checked .Node-content:before, 
-.Node.is-checked .Node-renderedContent:before {
-  content: '#completed';
-  background: #8d929b;
-  color: white;
-  font-weight: bold;
-  font-style: normal !important;
-}
-
-/* #username tags for task assignments */
-.node-tag[title~="#alberto"],
-.node-tag[title~="#anique.yael"],
-.node-tag[title~="#anu"],
-.node-tag[title~="#daniel"], 
-.node-tag[title~="#hazem"], 
-.node-tag[title~="#johncoate"], 
-.node-tag[title~="#matthias"],
-.node-tag[title~="#nadia"],
-.node-tag[title~="#noemi"],
-.node-tag[title~="#zmorda"] {
-  background-color: #e5e5e0!important;
-  color: #51514f !important;
-  font-weight: bold;
 }
 
 /* #by-username tags for task authorship */
@@ -116,10 +107,21 @@
 /* code */
 .node-inline-code {
   /* Formatting done just as in Discourse. */
-  color: black;
-  background-color: #ffefef;
-  font-family: monospace;
+    color: #333;
+    background-color: #f8f8f8;
+    font-family: monospace;
+    font-size: 1em;
 }
+
+/* Added spacing between lists */
+.Node-self.is-noteEmpty .Node-content, .Node-self.is-noteEmpty .Node-renderedContent, .Node-note, .Node-renderedNote
+  {
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+    /*border-bottom: 1px solid #dfdfdf;
+    max-width: 90%;*/ */ uncomment if you wish to use horizontal bar instead */
+  }
+
 
 /******************************************/
 /* EDIT HERE TO HIGHLIGHT YOUR OWN STUFF */
@@ -150,5 +152,5 @@
   background-color: #363636 !important;
   color: white !important;
 }
-
+  
 } /* end @-moz-document */
