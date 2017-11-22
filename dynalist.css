@@ -63,6 +63,7 @@
 .node-tag[title*="#by-"] {
   background-color: #f4f4f4 !important;
   color: #646464 !important;
+  font-weight: normal !important;
 }
 
 /* @username tags for mentions */
