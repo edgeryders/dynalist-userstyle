@@ -87,11 +87,11 @@
 /* hyperlinks */
 .node-link {
   /* Formatting done just as in Discourse. */
-  word-wrap: break-word;
-    color: #08c;
-    text-decoration: none;
-    cursor: pointer;
-    background: transparent;
+  word-wrap: break-word !important;
+    color: #08c !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    background: transparent !important;
 }
 
 /* hyperlinks on the empty page before opening any document */
