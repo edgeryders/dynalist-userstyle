@@ -1,5 +1,5 @@
-@-moz-document url-prefix("https://dynalist.io/")
-{
+@-moz-document url-prefix("https://dynalist.io/d/") {
+  
 /* checked items appearance */
 .Node.is-checked .node-link, 
 .Node.is-checked .node-tag, 
@@ -41,7 +41,6 @@
 .node-tag[title~="#permanent"] {
   background: green !important;
   color: white !important;
-  text-decoration: bold;
   text-decoration: none !important;
 }
 
@@ -88,15 +87,15 @@
 .node-link {
   /* Formatting done just as in Discourse. */
   word-wrap: break-word !important;
-    color: #08c !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    background: transparent !important;
+  color: #08c !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  background: transparent !important;
 }
 
 /* hyperlinks on the empty page before opening any document */
 #blank-slate div ul li a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* #tags and @tags mouse-over highlighting */
@@ -108,20 +107,21 @@
 /* code */
 .node-inline-code {
   /* Formatting done just as in Discourse. */
-    color: #333;
-    background-color: #f8f8f8;
-    font-family: monospace;
-    font-size: 1em;
+  color: #333;
+  background-color: #f8f8f8;
+  font-family: monospace;
+  font-size: 1em;
 }
 
 /* Added spacing between lists */
-.Node-self.is-noteEmpty .Node-content, .Node-self.is-noteEmpty .Node-renderedContent, .Node-note, .Node-renderedNote
-  {
-    padding-bottom: 3px;
-    margin-bottom: 6px;
-    /*border-bottom: 1px solid #dfdfdf;
-    max-width: 90%;*/ */ uncomment if you wish to use horizontal bar instead */
-  }
+.Node-self.is-noteEmpty .Node-content, 
+.Node-self.is-noteEmpty .Node-renderedContent, 
+.Node-note, .Node-renderedNote {
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+  /*border-bottom: 1px solid #dfdfdf;
+  max-width: 90%;*/ /* uncomment if you wish to use horizontal bar instead */
+}
 
 
 /******************************************/
@@ -147,6 +147,7 @@
   background: #dcc8b2 !important; /* similar to heatmap-low color #9b764f from Discourse */
 }
 /******************************************/
+
 
 /* #tags and @tags mouse-over highlighting */
 .node-tag:hover {
