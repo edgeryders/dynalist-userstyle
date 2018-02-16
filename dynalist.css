@@ -1,11 +1,11 @@
 @-moz-document url-prefix("https://dynalist.io/d/") {
-  
+
 /* checked items appearance */
-.Node.is-checked .node-link, 
-.Node.is-checked .node-tag, 
-.Node.is-checked .node-time, 
-.Node.is-checked .Node-content, 
-.Node.is-checked .Node-renderedContent, 
+.Node.is-checked .node-link,
+.Node.is-checked .node-tag,
+.Node.is-checked .node-time,
+.Node.is-checked .Node-content,
+.Node.is-checked .Node-renderedContent,
 .Node.is-checked {
   color: #a9a9a9;
   text-decoration: none !important;
@@ -113,14 +113,142 @@
   font-size: 1em;
 }
 
-/* Added spacing between lists */
+/* Additional spacing between lists */
 .Node-self.is-noteEmpty .Node-content, 
 .Node-self.is-noteEmpty .Node-renderedContent, 
-.Node-note, .Node-renderedNote {
+.Node-note, 
+.Node-renderedNote {
   padding-bottom: 3px;
-  margin-bottom: 6px;
-  /*border-bottom: 1px solid #dfdfdf;
-  max-width: 90%;*/ /* uncomment if you wish to use horizontal bar instead */
+}
+
+/* Fix the redo button position in the mobile version. */
+/* (Not that useful, as the only option to use it is mobile Firefox with the Stylus extension, and it's really slow.) */
+.MobileHeader-optionContainer .MobileHeader-option--undo {
+    right: 175px;
+}
+
+/* Distinctive Headings small */
+.is-smallFont .Node-self.is-heading1 .Node-contentContainer {
+  font-size: 32px;
+  color: #825ce8;
+}
+
+.is-smallFont .Node-self.is-heading2 .Node-contentContainer {
+  font-size: 22px;
+  color: #0d8bdc;
+}
+
+.is-smallFont .Node-self.is-heading3 .Node-contentContainer {
+  font-size: 16px;
+  color: #40e618;
+}
+
+/* Distinctive Headings medium */
+.is-mediumFont .Node-self.is-heading1 .Node-contentContainer {
+  font-size: 32px;
+  color: #825ce8;
+}
+
+.is-mediumFont .Node-self.is-heading2 .Node-contentContainer {
+  font-size: 22px;
+  color: #0d8bdc;
+}
+
+.is-mediumFont .Node-self.is-heading3 .Node-contentContainer {
+  font-size: 16px;
+  color: #40e618;
+}
+
+/* Distinctive Headings large */
+.is-largeFont .Node-self.is-heading1 .Node-contentContainer {
+  font-size: 32px;
+  color: #825ce8;
+}
+
+.is-largeFont .Node-self.is-heading2 .Node-contentContainer {
+  font-size: 22px;
+  color: #0d8bdc;
+}
+
+.is-largeFont .Node-self.is-heading3 .Node-contentContainer {
+  font-size: 16px;
+  color: #40e618;
+}
+
+/* Fixing font size in the desktop version. */
+
+/* It has to be small enough in the desktop version even when "large" is selected in the settings, which is 
+   needed to make the mobile version usable for touch input. We use px font sizes as in original Dynalist CSS, 
+   so you may need to adapt it for your screen display density to be comfortable. So:
+
+   EDIT HERE to adapt font sizes, if your setup needs it. */
+.is-desktop .is-smallFont .Node-contentContainer {
+  font-size: 13px;
+}
+.is-desktop .is-smallFont .Node-contentContainer .node-inline-item, 
+.is-desktop .is-smallFont .Node-contentContainer .node-inline-code {
+    font-size: 12px;
+    line-height: 14px;
+}
+.is-desktop .is-smallFont .node-line {
+    line-height: 14px;
+    min-height: 14px;
+}
+.is-desktop .is-smallFont .Node-noteContainer {
+  font-size: 12px;
+  line-height: 13px;
+}
+
+.is-desktop .is-mediumFont .Node-contentContainer {
+  font-size: 14px;
+}
+.is-desktop .is-mediumFont .Node-contentContainer .node-inline-item, 
+.is-desktop .is-mediumFont .Node-contentContainer .node-inline-code {
+    font-size: 13px;
+    line-height: 15px;
+}
+.is-desktop .is-mediumFont .node-line {
+    line-height: 16px;
+    min-height: 16px;
+}
+.is-desktop .is-mediumFont .Node-noteContainer {
+  font-size: 13px;
+  line-height: 14px;
+}
+
+.is-desktop .is-largeFont .Node-contentContainer {
+  font-size: 15px;
+}
+.is-desktop .is-largeFont .Node-contentContainer .node-inline-item, 
+.is-desktop .is-largeFont .Node-contentContainer .node-inline-code {
+    font-size: 13px;
+    line-height: 15px;
+}
+.is-desktop .is-largeFont .node-line {
+    line-height: 17px;
+    min-height: 17px;
+}
+.is-desktop .is-largeFont .Node-noteContainer {
+  font-size: 13px;
+  line-height: 14px;
+}
+
+/* Fixing list density in the desktop version. */
+/* It has to be compact enough in the desktop version even when "comfortable" is selected in the settings, which is 
+   needed to make the mobile version usable for touch input. */
+.is-desktop .is-compactDensity .Node-self {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.is-desktop .is-cozyDensity .Node-self {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.is-desktop .is-comfortableDensity .Node-self {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 
@@ -132,18 +260,18 @@
    Alternatively copy&paste this to a new stylesheet applied on dynalist.io. */
 
 /* tasks I am assigned to */
-.node-tag[title~="#username"] {
+.node-tag[title~="#matthias"] {
   background: #fe7a15 !important; /* heatmap-high color from Discourse */
   color: black !important;
 }
-
+  
 /* tasks I created */
-.node-tag[title~="#by-username"] {
+.node-tag[title~="#by-matthias"] {
   background: #dcc8b2 !important; /* similar to heatmap-low color #9b764f from Discourse */
 }
 
 /* own mentions */
-.node-tag[title~="@username"] {
+.node-tag[title~="@matthias"] {
   background: #dcc8b2 !important; /* similar to heatmap-low color #9b764f from Discourse */
 }
 /******************************************/
