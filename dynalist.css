@@ -260,18 +260,18 @@
    Alternatively copy&paste this to a new stylesheet applied on dynalist.io. */
 
 /* tasks I am assigned to */
-.node-tag[title~="#matthias"] {
+.node-tag[title~="#username"] {
   background: #fe7a15 !important; /* heatmap-high color from Discourse */
   color: black !important;
 }
   
 /* tasks I created */
-.node-tag[title~="#by-matthias"] {
+.node-tag[title~="#by-username"] {
   background: #dcc8b2 !important; /* similar to heatmap-low color #9b764f from Discourse */
 }
 
 /* own mentions */
-.node-tag[title~="@matthias"] {
+.node-tag[title~="@username"] {
   background: #dcc8b2 !important; /* similar to heatmap-low color #9b764f from Discourse */
 }
 /******************************************/
