@@ -1,4 +1,4 @@
-@-moz-document url-prefix("https://dynalist.io/d/") {
+@-moz-document url-prefix("https://dynalist.io/") {
 
 /* checked items appearance */
 .Node.is-checked .node-link,
@@ -27,6 +27,7 @@
   background-color: #e5e5e0!important;
   color: #51514f !important;
   font-weight: bold;
+  font-size:18px;  /* Applying constant fontsize even to the note*/
 }
 
 /* #important tag */
@@ -72,10 +73,11 @@
   color: #646464 !important;
   font-weight: bold;
   text-decoration: none !important;
+  font-size:18px;  /* Applying constant fontsize even to the note*/
 }
 .Node-contentContainer .node-tag[title*="Filter @"] {
   /* As in Discourse, but only applied to normal items. Font would become too small in notes. */
-  font-size: 0.93em;
+  font-size: 18px; /* Applying constant fontsize even to the note*/ 
 }
 
 /* item bulletpoints */
@@ -217,12 +219,12 @@
 }
 
 .is-desktop .is-largeFont .Node-contentContainer {
-  font-size: 15px;
+  font-size: 16px;
 }
 .is-desktop .is-largeFont .Node-contentContainer .node-inline-item, 
 .is-desktop .is-largeFont .Node-contentContainer .node-inline-code {
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 16px;
 }
 .is-desktop .is-largeFont .node-line {
     line-height: 17px;
@@ -231,6 +233,11 @@
 .is-desktop .is-largeFont .Node-noteContainer {
   font-size: 13px;
   line-height: 14px;
+}
+.is-desktop .is-largeFont .Node-noteContainer .node-inline-item, 
+.is-desktop .is-largeFont .Node-noteContainer .node-inline-code {
+font-size: 12px;
+line-height: 14px;
 }
 
 /* Fixing list density in the desktop version. */
