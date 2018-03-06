@@ -1,4 +1,12 @@
 @-moz-document url-prefix("https://dynalist.io/") {
+  
+/*
+Edgeryders Dynalist Userstyle, Version 1.4 (2018-03-06)
+
+Licence: Creative Common Public Domain Dedication (CC0)
+Code repository: https://github.com/edgeryders/dynalist-userstyle
+Documentation: https://edgeryders.eu/t/7618
+*/  
 
 /* checked items appearance */
 .Node.is-checked .node-link,
