@@ -27,7 +27,6 @@
   background-color: #e5e5e0!important;
   color: #51514f !important;
   font-weight: bold;
-  font-size:18px;  /* Applying constant fontsize even to the note*/
 }
 
 /* #important tag */
@@ -73,11 +72,10 @@
   color: #646464 !important;
   font-weight: bold;
   text-decoration: none !important;
-  font-size:18px;  /* Applying constant fontsize even to the note*/
 }
 .Node-contentContainer .node-tag[title*="Filter @"] {
   /* As in Discourse, but only applied to normal items. Font would become too small in notes. */
-  font-size: 18px; /* Applying constant fontsize even to the note*/ 
+  font-size: 0.93em;
 }
 
 /* item bulletpoints */
@@ -241,6 +239,7 @@ line-height: 14px;
 }
 
 /* Fixing list density in the desktop version. */
+  
 /* It has to be compact enough in the desktop version even when "comfortable" is selected in the settings, which is 
    needed to make the mobile version usable for touch input. */
 .is-desktop .is-compactDensity .Node-self {
@@ -257,7 +256,13 @@ line-height: 14px;
   padding-top: 0px;
   padding-bottom: 0px;
 }
+  
+/* Fixing the horizontal scrollbar in the desktop version. */
 
+/* Due to a Dynalist bug, a horizontal scrollbar will appear when disabling the advanced setting "Document Border". */
+.is-desktop .Document {
+  width: calc(100% - 67px);
+}
 
 /******************************************/
 /* EDIT HERE TO HIGHLIGHT YOUR OWN STUFF */
