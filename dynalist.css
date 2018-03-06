@@ -199,8 +199,8 @@ Documentation: https://edgeryders.eu/t/7618
     line-height: 14px;
 }
 .is-desktop .is-smallFont .node-line {
-    line-height: 14px;
-    min-height: 14px;
+    line-height: 16px;
+    min-height: 16px;
 }
 .is-desktop .is-smallFont .Node-noteContainer {
   font-size: 12px;
@@ -216,8 +216,8 @@ Documentation: https://edgeryders.eu/t/7618
     line-height: 15px;
 }
 .is-desktop .is-mediumFont .node-line {
-    line-height: 16px;
-    min-height: 16px;
+    line-height: 17px;
+    min-height: 17px;
 }
 .is-desktop .is-mediumFont .Node-noteContainer {
   font-size: 13px;
@@ -233,8 +233,8 @@ Documentation: https://edgeryders.eu/t/7618
     line-height: 16px;
 }
 .is-desktop .is-largeFont .node-line {
-    line-height: 17px;
-    min-height: 17px;
+    line-height: 19px;
+    min-height: 19px;
 }
 .is-desktop .is-largeFont .Node-noteContainer {
   font-size: 13px;
