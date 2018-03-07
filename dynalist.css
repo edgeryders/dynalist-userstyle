@@ -1,7 +1,7 @@
 @-moz-document url-prefix("https://dynalist.io/") {
   
 /*
-Edgeryders Dynalist Userstyle, Version 1.4 (2018-03-06)
+Edgeryders Dynalist Userstyle, Version 1.5 (2018-03-07)
 
 Licence: Creative Common Public Domain Dedication (CC0)
 Code repository: https://github.com/edgeryders/dynalist-userstyle
@@ -35,6 +35,7 @@ Documentation: https://edgeryders.eu/t/7618
   background-color: #e5e5e0!important;
   color: #51514f !important;
   font-weight: bold;
+  font-size:17px;  /* Applying fontsize constant even on note*/
 }
 
 /* #important tag */
@@ -80,10 +81,11 @@ Documentation: https://edgeryders.eu/t/7618
   color: #646464 !important;
   font-weight: bold;
   text-decoration: none !important;
+  font-size:17px;  /* Applying fontsize similar to # tag even on note*/
 }
 .Node-contentContainer .node-tag[title*="Filter @"] {
   /* As in Discourse, but only applied to normal items. Font would become too small in notes. */
-  font-size: 0.93em;
+  font-size: 17.5px;
 }
 
 /* item bulletpoints */
@@ -242,7 +244,7 @@ Documentation: https://edgeryders.eu/t/7618
 }
 .is-desktop .is-largeFont .Node-noteContainer .node-inline-item, 
 .is-desktop .is-largeFont .Node-noteContainer .node-inline-code {
-font-size: 12px;
+font-size: 13px;
 line-height: 14px;
 }
 
@@ -272,6 +274,11 @@ line-height: 14px;
   width: calc(100% - 67px);
 }
 
+/* Narrow content area in main content due to change in horizontal scrollbar*/  
+ .DocumentBreadcrumb {
+width: calc(100% - 87px);
+}
+  
 /******************************************/
 /* EDIT HERE TO HIGHLIGHT YOUR OWN STUFF */
   
