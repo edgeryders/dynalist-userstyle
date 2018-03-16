@@ -1,7 +1,7 @@
 # Edgeryders Dynalist User defined css
 > Custom user defined css designed for https://edgeryders.eu users collaboration 
 
-[![License: CC Public Domain 1.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![License: CC Public Domain 1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Custom css style for dynalist allows you to overide default styling with your own.
 
